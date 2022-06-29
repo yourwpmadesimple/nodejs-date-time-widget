@@ -24,3 +24,12 @@ const formatTime = (date) => {
     return `${hours12.toString()}:${minutes.toString().padStart(2, "0")}:${seconds} ${timeofDay ? "AN" : "PM"}`
 }
 ```
+## 2. Setup Days, Month, Year Function
+```JavaScript
+const formatDate = (date) => {
+    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+    return `${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`
+}
+```
